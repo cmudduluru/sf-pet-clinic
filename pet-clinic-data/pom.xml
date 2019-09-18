@@ -16,7 +16,6 @@
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,8 +42,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-
-
-
 </project>
