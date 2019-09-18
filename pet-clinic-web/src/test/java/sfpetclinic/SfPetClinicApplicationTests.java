@@ -1,4 +1,4 @@
-package com.learnspring.sfpetclinic;
+package sfpetclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
