@@ -1,6 +1,6 @@
 package com.learnspring.sfpetclinic.model;
 
-public class PetType extends BaseEntity{
+public class PetType extends BaseEntity {
 
     public String getName() {
         return name;
