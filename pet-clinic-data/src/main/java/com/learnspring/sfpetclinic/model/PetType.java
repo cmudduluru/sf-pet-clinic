@@ -2,6 +2,8 @@ package com.learnspring.sfpetclinic.model;
 
 public class PetType extends BaseEntity {
 
+    private String name;
+
     public String getName() {
         return name;
     }
@@ -10,7 +12,6 @@ public class PetType extends BaseEntity {
         this.name = name;
     }
 
-    private String name;
 
 
 }
