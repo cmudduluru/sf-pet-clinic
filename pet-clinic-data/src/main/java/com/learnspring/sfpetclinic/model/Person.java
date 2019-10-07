@@ -1,17 +1,16 @@
 package com.learnspring.sfpetclinic.model;
 
+
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Person extends BaseEntity {
 
+    @Column(name = "first_name")
     private String firstName;
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
+    @Column(name = "last_name")
     private String lastName;
 
     public String getFirstName() {
@@ -21,4 +20,13 @@ public class Person extends BaseEntity {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
 }
