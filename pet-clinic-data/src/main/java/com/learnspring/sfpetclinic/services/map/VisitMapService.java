@@ -2,11 +2,13 @@ package com.learnspring.sfpetclinic.services.map;
 
 import com.learnspring.sfpetclinic.model.Visit;
 import com.learnspring.sfpetclinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
@@ -26,10 +28,10 @@ public class VisitMapService extends AbstractMapService<Visit, Long> implements 
 
     @Override
     public Visit save(Visit visit) {
-      /*  if(visit.getPet() == null || visit.getPet().getOwner() == null || visit.getPet().getId() == null
-        || visit.getPet().getOwner().getId() == null) {
+        if(visit.getPet() == null || visit.getPet().getOwner() == null || visit.getPet().getId() == null
+                || visit.getPet().getOwner().getId() == null){
             throw new RuntimeException("Invalid Visit");
-        }*/
+        }
         return super.save(visit);
     }
 

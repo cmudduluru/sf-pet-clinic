@@ -16,7 +16,8 @@ public class DataLoader implements CommandLineRunner {
     private final SpecialityService specialityService;
     private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
@@ -78,12 +79,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.setAddress("123 BrickLande");
         owner2.setCity("Miami");
         owner2.setTelephone("1234454");
+
         Pet finasPet = new Pet();
         finasPet.setPetType(savedCatPetType);
         finasPet.setOwner(owner2);
         finasPet.setBirthDate(LocalDate.now());
         finasPet.setName("Just Cat");
-        owner1.getPets().add(finasPet);
+        owner2.getPets().add(finasPet);
         ownerService.save(owner2);
 
         Visit catVisit = new Visit();
