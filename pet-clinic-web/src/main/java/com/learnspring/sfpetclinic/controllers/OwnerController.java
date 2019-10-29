@@ -37,7 +37,7 @@ public class OwnerController {
 
     @GetMapping
     public String processFindForm(Owner owner, BindingResult result, Model model){
-        // allow parameterless GET request for /owners to return all records
+        // allow parameter less GET request for /owners to return all records
         if (owner.getLastName() == null) {
             owner.setLastName(""); // empty string signifies broadest possible search
         }
